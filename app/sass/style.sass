@@ -1,0 +1,148 @@
+@import ../../bower_components/reset-css/sass/_reset
+@import ../../bower_components/normalize.css/normalize
+@import _font
+@import vars
+
+@import components/card
+@import components/btn
+@import components/icon
+@import layouts/banner
+@import components/menu
+@import components/burger
+@import components/hero
+@import components/text
+
+@import components/container
+@import components/flex
+@import components/ico
+@import components/img
+@import components/bg
+@import components/promo-block
+@import components/platform-window
+
+@import components/cards-list
+@import components/analyric-promo
+@import components/tr-promo
+@import components/faq
+@import components/widget
+@import components/platform-btns
+@import components/line-hero
+@import components/basic-hero
+@import components/single-hero
+@import components/text-blocks
+@import components/select-info
+@import components/select-quest
+@import components/details
+@import components/comparison
+@import components/about-us
+@import components/advantages
+@import components/terms
+
+@import layouts/header
+@import layouts/form
+@import layouts/main
+@import layouts/category
+@import layouts/documents
+@import layouts/table
+@import layouts/contacts
+@import layouts/single
+@import layouts/footer
+
+*, *:before, *:after
+  box-sizing: border-box
+
+html, body
+  overflow-x: hidden
+  position: relative
+
+body
+  font-family: 'Montserrat', sans-serif
+  font-size: 22px
+  line-height: 28.6px
+  //color: $Black-text
+  // position: relative
+  //background-color: $White-grey-bg
+picture
+  font-size: 0
+  img
+    vertical-align: middle
+button
+  display: block
+  border: none
+  text-align: center
+
+// main.main
+//   padding-top: 80px
+
+ul
+  list-style-type: none
+summary
+  list-style: none
+a
+  text-decoration: none
+  color: $Black
+h1, .h1
+  font-size: 55px
+  font-weight: 600
+  line-height: 60.5px
+  margin: 0
+h2, .h2
+  font-size: 42px
+  font-weight: 600
+  line-height: 46.2px
+  margin: 0
+h3, .h3
+  font-size: 33px
+  font-weight: 500
+  line-height: 33px
+  margin: 0
+h1 span, h2 span, h3 span
+  color: $Gold
+
+body.black
+  background: $Black
+  main
+    .container_bl
+      background-color: transparent !important
+  
+
+// @media screen and ( max-width: $tablet )
+//   main.main
+//     padding-top: 62px
+
+@media screen and ( max-width: $tablet )
+  body
+    font-size: 20px
+    line-height: 24.4px
+  h1, .h1
+    font-size: 40px
+    line-height: 52px
+  h2, .h2
+    font-size: 36px
+    line-height: 41.5px
+  h3, .h3
+    font-size: 28px
+    line-height: 26px
+  .slick-slide 
+    margin: 0 8px
+  .slick-list 
+    margin: 0 -8px !important
+@media screen and ( max-width: $mobile )
+  body
+    font-size: 18px
+    line-height: 23.4px
+  h1, .h1
+    font-size: 30px
+    line-height: 33px
+  h2, .h2
+    font-size: 25px
+    line-height: 27.5px
+  h3, .h3
+    font-size: 21px
+    line-height: 21px
+  .slick-slide 
+    margin: 0 5px
+  .slick-list 
+    margin: 0 -5px !important
+  
+

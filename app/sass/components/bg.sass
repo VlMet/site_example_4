@@ -1,0 +1,56 @@
+.container_bl .bg, .container_bl.bg
+  background-color: $Black
+.bg
+  background-repeat: no-repeat !important
+  background-position: top left
+  background-size: cover
+  //background-size: cover
+  &_t
+    &_advantages
+      background-image: url("../img/svg/advantages-bg.svg")
+    &_about
+      background-image: url("../img/svg/about-bg.svg")
+      background-position: 100% 90px
+      background-size: auto
+    &_basic
+      background-image: url("../img/svg/basic-bg.svg")
+    &_select
+      background-image: url("../img/svg/select-bg.svg")
+      background-size: auto
+    &_crypto
+      background-image: url("../img/bg/bg-crypto.png")
+      background-size: auto
+    &_indices
+      background-image: url("../img/svg/indices-bg.svg")
+    &_promo
+      background-position: top right
+      background-image: url("../img/svg/promo-bg.svg")
+    &_online
+      background-image: url("../img/svg/online-bg.svg")
+    &_platform
+      background-size: auto
+      background-image: url("../img/bg/bg-platform.png")
+      // background-image: url("../img/about-us.png")
+    &_tr
+      background-image: url("../img/bg/bg-tr.png")
+    &_tr-2
+      background-image: url("../img/svg/tr-2-bg.svg")
+    &_why
+      background-image: url("../img/svg/why-bg.svg")
+      background-size: auto
+    &_faq
+      //background-image: url("../img/svg/faq-bg.svg")
+      background-image: url("../img/bg/bg-faq.png")
+      background-size: auto
+    &_banner
+      background-position: top right
+      background-image: url("../img/bg/bg-banner.png")
+    &_hero-main
+      background-image: url("../img/svg/hero-bg.svg")
+  
+@media (max-width: $mobile)
+  .bg
+    &_t
+      &_hero-main
+        background-image: url("../img/svg/hero-bg-mobile.svg")
+        background-size: 120%

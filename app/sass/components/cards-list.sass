@@ -1,0 +1,131 @@
+.cards-list
+  &_min
+    .cards-list__card
+      width: 334px
+      height: 128px
+      //font-size: 22px
+      //line-height: 28.6px
+      p
+        max-width: 150px
+  &_big
+    .cards-list__card
+      width: 488px
+      height: 181px
+  &__content
+    //внутри
+    width: 100%
+    display: flex
+    gap: 20px
+    align-items: center
+    justify-content: center
+    & > img
+      width: auto
+      height: 100%
+    p 
+      margin-bottom: 0 !important
+      max-width: 233px
+  &__card
+    //весь
+    display: flex
+    width: 456px
+    height: 181px
+    padding: 0 10px
+    background-color: $White
+    color: $Black
+    box-shadow: 0px 0px 5.2px 0px rgba(105, 105, 105, 0.25)
+    border-radius: 10px
+    font-size: 18px
+    line-height: 21.6px
+    &:hover
+      cursor: pointer
+    &_n
+      &_btc 
+        padding-left: 0 !important
+        & > *
+          justify-content: space-between
+          padding-right: 20px
+
+@media (max-width: $mobile)
+  .cards-list
+    &__card
+      font-size: 16px
+      line-height: 19.2px
+      padding: 0 19px
+      min-width: 360px
+      width: auto
+      height: 160px
+      img
+        height: 120px
+    // &_crypto
+    //   .cards-list__card
+    //     width: 300px
+    &_min
+      .cards-list__card
+        width: 253px
+        height: 104px
+    &_big
+      .cards-list__card
+        width: 300px
+        height: 120px
+    // &__content > img
+    //   height: 104px
+
+
+@media (min-width: $mobile)
+  .swiper-pagination
+    display: none
+  .mySwiperMobile > .swiper-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 32px
+
+.swiper 
+  width: 100%
+  // height: 128px
+  overflow: visible
+
+.container_bl
+  .swiper-scrollbar
+    background: #EDEDED
+.swiper-scrollbar
+  visibility: hidden
+  background: rgba(41, 42, 43, 0.5)
+  height: 1px !important
+  max-width: 132px
+  left: 50% !important
+  transform: translateX(-50%)
+  bottom: -20px !important
+
+.swiper-pagination
+  bottom: -30px !important
+.swiper-pagination-bullet
+  width: 12px
+  height: 12px
+  background: #292a2b 
+  opacity: 0.2 
+.container_bl
+  .swiper-pagination-bullet
+    background: $White 
+    opacity: 0.9 
+.swiper-pagination-bullet-active
+  background: $Gold !important
+  opacity: 1
+.swiper-scrollbar-drag
+  visibility: hidden
+  min-width: 43px
+  height: 4px
+  top: -100%
+  background: #d4a429
+  
+.swiper-container-free-mode > .swiper-wrapper 
+  transition-timing-function: linear
+
+@media (max-width: $mobile)
+  .swiper-scrollbar,.swiper-scrollbar-drag 
+    visibility: visible
+  .mySwiperMobile
+    padding: 0 10px 
+    
+
+

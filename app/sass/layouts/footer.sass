@@ -1,0 +1,131 @@
+.footer
+  font-size: 18px
+  line-height: 21.6px
+  &__desc
+    opacity: 0.4
+    //margin-top: 116px
+    margin-top: 48px
+  &__top
+    margin-bottom: 88px
+  &__btns
+    justify-content: center
+  &__bottom
+    margin-top: 40px
+    text-align: center
+  &__adr
+    max-width: 240px
+    &_desktop
+      margin-right: 100px
+    &_mobile
+      display: none
+  &__logo 
+    flex-shrink: 0
+    margin-right: 80px
+    img
+      max-width: 191px
+  &__phone::before, &__email::before, &__adr::before
+    content: ""
+    display: block
+    width: 20px
+    height: 20px
+    flex-shrink: 0
+    background-repeat: no-repeat
+    background-position: center
+  &__phone::before
+    background-image: url('../img/svg/call.svg')
+  &__email::before
+    background-image: url('../img/svg/mail.svg')
+  &__adr::before
+    background-image: url('../img/svg/adr.svg')
+  a
+    color: $White
+  nav
+    // display: none
+    width: 100%
+  nav > ul
+    width: 100%
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    flex-wrap: wrap
+  nav > ul > li > a
+    display: block
+    margin-bottom: 20px
+    font-size: 22px
+    line-height: 28.6px
+  nav > ul > li
+    width: 262px
+  nav > ul > li > ul
+    display: flex
+    flex-direction: column
+    gap: 10px
+    padding-right: 16px
+    & > li
+      transition: opacity 0.3s
+      opacity: 0.7
+      &:hover
+        opacity: 1
+
+@media (max-width: $tablet)
+  .footer
+    &__btns
+      justify-content: flex-end
+    &__top
+      width: 100%
+      flex-wrap: wrap
+      gap: 30px
+      justify-content: space-between
+    // &__logo
+    //   flex-basis: 45%
+    // &__btns
+    //   flex-basis: 45%
+    nav
+      & > ul
+        justify-content: start
+    &__adr
+      &_desktop
+        display: none
+      &_mobile
+        display: flex
+    &__logo
+      margin-right: 40px
+
+@media (max-width: $mobile)
+  .footer
+    &__top
+      flex-direction: column
+      align-items: flex-start
+    &__button
+      width: 100%
+    &__top 
+      & > .flex
+        width: 100%
+        flex-direction: column
+    &__logo
+      margin-bottom: 40px
+    &__phone, &__email, &__adr
+      font-size: 16px
+      line-height: 19.2px
+      &::before
+        background-size: contain
+        width: 17px
+        height: 17px
+    nav 
+      & > ul
+        flex-direction: column
+        gap: 30px
+        & > li
+          width: 100%
+          & > a
+            margin-bottom: 15px
+            font-size: 18px
+            line-height: 23.4px
+          & > ul
+            gap: 10px
+            & > li 
+              font-size: 16px
+              line-height: 19.2px
+    &__desc
+      font-size: 14px
+      line-height: 16.8px
+      margin-top: 60px

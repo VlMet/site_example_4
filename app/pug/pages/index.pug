@@ -1,0 +1,198 @@
+include ../components/head.pug
+body
+  include ../components/header.pug
+  main.main
+    section.hero.hero_main.container.container_inside.container_bl.bg.bg_t_hero-main
+      .container__wrap.hero__box
+        .flex.hero__box.hero__flex.flex_center_j.flex_center_a
+          .flex.flex_duo.flex_col.container__pd.flex_center_j
+            h1 Lorem ipsum dolor sit amet consectetur. <span>Aspernatur porro incidunt</span>
+            a(href="#signup", target="_blank").btn
+              span Button
+          .img.img_bottom.hero__img-main.container__blur
+            .img__card.img__card_left.flex.flex_gap_10.flex_center_a
+              p 8
+              p company<br>advantage
+            .img__card.img__card_right.flex.flex_gap_10.flex_center_a
+              p 10+
+              p company<br>advantage
+            picture
+              source(srcset="img/main-hero.png" media="(min-width:769px)")
+              source(srcset="img/mobile/m-main-hero.png" media="(max-width:768px)")
+              img(src="../img/main-hero.png", alt="")
+    section.container
+      .container__wrap 
+        h2 Lorem ipsum dolor
+        p.text_tools-main Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae non, pariatur obcaecati odit nemo distinctio, sapiente vel esse nisi, quod totam aliquid! Recusandae excepturi alias natus ex nemo maxime neque!
+      .container__abroad
+        ul.cards-list.cards-list_min.swiper.mySwiper.swiper-container-free-mode
+          .swiper-wrapper
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-3.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-16.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-13.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-12.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide.cards-list__card_n_btc
+              .cards-list__content
+                img(src="img/tools-slider-4.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-5.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-3.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-16.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-13.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-12.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide.cards-list__card_n_btc
+              .cards-list__content
+                img(src="img/tools-slider-4.png", alt="")
+                p Lorem ipsum dolor
+            li.cards-list__card.swiper-slide
+              .cards-list__content
+                img(src="img/tools-slider-5.png", alt="")
+                p Lorem ipsum dolor
+          .swiper-scrollbar
+      .container__wrap.flex.flex_center_j
+        a(href="#signup", target="_blank").btn.container__bottom Button
+    
+    section.container.container_bl.container_floor.bg.bg_t_platform
+      .container__wrap 
+        h2 Lorem ipsum dolor
+        p.text_platform_main Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque dicta at deleniti optio vero assumenda quod id repellendus aperiam est iure sit, totam alias laborum autem dolore sunt reiciendis recusandae.
+        .flex.main__platform.flex_sp.flex_gap_30.flex_center_a
+          .img.img_n_main-platform.flex.flex_center_a.flex_center_j.img.main__pl-img.container__blur
+            picture
+              source(srcset="img/main-platform-mockup.png" media="(min-width:769px)")
+              source(srcset="img/mobile/m-main-platform-mockup.png" media="(max-width:768px)")
+              img(src="img/main-platform-mockup.png", alt="")
+          ul.flex.flex_col.flex_gap_20.main__list.flex_center_j
+            li.card
+              .flex.flex_gap_15.flex_center_a.card__title
+                .ico
+                  include ../../img/svg/ico-interface.svg
+                h3 Point
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li.card
+              .flex.flex_gap_15.flex_center_a.card__title
+                .ico
+                  include ../../img/svg/ico-update.svg
+                h3 Point
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li.card
+              .flex.flex_gap_15.flex_center_a.card__title
+                .ico
+                  include ../../img/svg/ico-tools.svg
+                h3 Point
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            li.card
+              .flex.flex_gap_15.flex_center_a.card__title
+                .ico
+                  include ../../img/svg/ico-security.svg
+                h3 Point
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        .flex.flex_center_j
+          a(href="platform.html").btn.container__bottom Button
+    
+    section.container.container_bl.bg.bg_t_tr.tr-promo
+      .container__wrap      
+        .flex.flex_sp.tr-promo__inner
+          .flex.flex_center_a.container__blur
+            .tr-promo__block.flex.flex_col.flex_trio
+              h2 Lorem ipsum dolor
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              a(href="#signup").btn.btn_wh Button
+          .tr-promo__half.tr-promo__half_line
+            ol.tr-promo__list.flex.flex_col.flex_gap_50
+              li.flex.flex_gap_50.flex_center_a
+                .flex.flex_col.flex_gap_10
+                  h3 Point
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              li.flex.flex_gap_50.flex_center_a
+                .flex.flex_col.flex_gap_10
+                  h3 Point
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              li.flex.flex_gap_50.flex_center_a
+                .flex.flex_col.flex_gap_10
+                  h3 Point
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    
+    section.container.analytic-promo.container_inside
+      .container__wrap
+        .flex.analytic-promo__block
+          .flex.flex_col.flex_trio.container__pd.analytic-promo__text
+            h2 Lorem ipsum 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            a(href="state.html").btn
+              span Button
+          .img.img_bottom.analytic-promo__img
+            picture
+              source(srcset="img/analytic-mockup.png" media="(min-width:769px)")
+              source(srcset="img/mobile/m-analytic-mockup.png" media="(max-width:768px)")
+              img(src="img/analytic-mockup.png", alt="")
+    
+    section.container.container_bl.bg.bg_t_faq
+      .container__wrap 
+        h2 Lorem ipsum dolor 
+        .flex.flex_center_j
+          ul.faq.flex.flex_col
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, qui excepturi blanditiis unde iusto nobis culpa, odio facilis tenetur, quae dolorem. Harum aut placeat illo modi porro mollitia cum qui!
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa iusto, quas voluptas obcaecati excepturi, nostrum aut voluptatum numquam optio omnis, perferendis laudantium reprehenderit. Quod consequatur nam unde sequi doloremque facere.
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque placeat distinctio nihil eaque id nobis autem explicabo perspiciatis sint voluptas vitae quae beatae ratione doloribus perferendis molestias, dolore magnam. Vitae.
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, repellendus sequi veritatis fuga totam at, voluptate vitae assumenda ipsum magni pariatur enim vel est id quos quae porro. Debitis, quo?
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore temporibus non saepe ratione nesciunt corrupti quam voluptatum officiis atque, libero, harum molestiae deleniti quisquam officia eaque sed amet cum? Rem?
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ipsa excepturi praesentium, harum dolor sapiente molestias eligendi eum repellat porro nostrum natus id, officia rem alias saepe facilis quibusdam? Facilis.
+            li.faq__block
+              button.faq__trigger.flex.flex_center_a Question
+                include ../../img/svg/faq-arrow.svg
+              p.faq__content Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur at quae accusamus nisi in, ut pariatur dolorem quia nulla consequuntur minima odit sit eligendi magni deleniti impedit nihil quos! Quae.
+
+
+    aside.container.container_inside
+      include ../components/banner_1.pug
+
+
+  include ../components/footer.pug
+  include ../components/scripts.pug
+

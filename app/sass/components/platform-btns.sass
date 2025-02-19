@@ -1,0 +1,35 @@
+.platform-btns
+  &__item
+    border: 0.7px solid $White
+    border-radius: 4px
+    width: 62px
+    height: 62px
+    background: transparent
+    transition: 0.3s all
+    position: relative
+    overflow: hidden
+    svg
+      position: relative
+      z-index: 1
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      background: $Gradient
+      transition: opacity 0.3s
+      opacity: 0
+    &:hover
+      border: 0.7px solid transparent
+      &::before
+        opacity: 1
+
+@media (max-width: $mobile)
+  .platform-btns
+    &__item
+      width: 40px
+      height: 40px
+      svg
+        width: 18px
+        height: auto

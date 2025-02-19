@@ -1,0 +1,49 @@
+.hero
+  padding-top: 110px
+  //height: 100vh
+  //max-height: 820px
+  &__box
+    height: 100%
+  &__flex
+    & > *:first-child
+      width: 100%
+      max-width: 823px
+  &__img-main
+    max-width: 580px
+    padding-top: 84px
+
+@media (max-width: $tablet)
+  .hero
+    //max-height: 1100px
+    padding-top: 110px
+    &__box
+      flex-direction: column
+    // .container__pd
+    //   padding: 141px 0 40px
+    // &__img-main
+    //   left: 200px
+    .container__pd
+      padding-bottom: 0
+
+@media (max-width: $mobile)
+  .hero
+    &__img-main
+      padding-top: 0
+    &__box
+      position: relative
+    h1
+      text-align: center
+      margin-bottom: 65px !important
+    .btn
+      position: absolute !important
+      bottom: 20px
+      width: 100%
+      z-index: 2
+    .img
+      margin-bottom: 40px 
+      img
+        transform: scale(1.2) translate(4px,6px)
+    .container__pd
+      padding-bottom: 27px
+    // &__img-main
+    //   left: 21%

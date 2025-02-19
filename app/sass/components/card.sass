@@ -1,0 +1,22 @@
+.card
+  background: $White
+  padding: 33px 47px
+  color: $Black
+  border-radius: 15px
+  p
+    font-size: 18px
+    line-height: 21.6px
+  &__title
+    margin-bottom: 15px
+    & + *::before
+      content: ""
+      display: block
+      width: 122px
+      height: 2px
+      background: $Gradient
+      border-radius: 2px
+      margin-bottom: 15px
+
+@media (max-width: $tablet)
+  .card
+    padding: 20px 20px 39px

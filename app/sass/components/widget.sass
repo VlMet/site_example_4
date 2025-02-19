@@ -1,0 +1,46 @@
+.widget-grid
+  display: grid
+  gap: 32px
+  grid-template-columns: repeat(2, calc( 50% -  16px))
+  &__item
+    &:first-child
+      grid-column: 1 / 3
+    background: $White
+    border-radius: 15px
+    padding: 50px
+    color: $Black
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    h3
+      margin-bottom: 20px
+    h3 + p
+      margin-bottom: 30px
+      font-size: 19px
+      line-height: 21.4px
+      max-width: 520px
+    .widget
+      margin: 0 auto
+
+.widget
+  width: 100%
+  & > *
+    margin: 0 auto
+  &_max
+    max-width: 1160px
+    margin: 0 auto
+
+@media (max-width: $tablet)
+  .widget-grid
+    &__item
+      padding: 60px 15px
+
+@media (max-width: $mobile)
+  .widget-grid
+    display: flex
+    flex-direction: column
+    gap: 30px
+    &__item
+      padding: 60px 15px
+  

@@ -1,0 +1,82 @@
+.btn
+  word-wrap: no-wrap
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 17px 5px
+  width: 100%
+  max-width: 333px
+  font-weight: 500
+  color: $White
+  border: none
+  border-radius: 10px
+  font-size: 22px
+  line-height: 28.6px
+  background: $Gold
+  z-index: 1
+  &:hover
+    cursor: pointer
+  &:not(&_wh):not(&_br)
+    background: $Gold
+    position: relative
+    overflow: hidden
+    &::before
+      content: ""
+      position: absolute
+      z-index: -1
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: $Gradient
+      transition: opacity 0.3s
+    &:hover::before
+      opacity: 0
+  // & > *
+  //   position: relative
+  //   z-index: 1
+  &.flex > *
+    flex-shrink: 0
+  &_min
+    padding: 11px 36px
+    font-size: 18px
+    line-height: 21.6px
+    max-width: 221px
+  &_long
+    max-width: 415px
+    //padding-left: 45px
+    //padding-right: 45px 
+  &_br
+    background: $Brown
+    position: relative
+    overflow: hidden
+    z-index: 0
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: $Gradient
+      opacity: 0
+      transition: opacity 0.3s
+      z-index: -1
+    &:hover::before
+      opacity: 1
+  &_wh
+    background: transparent
+    border: 1px solid $White
+    transition: all 0.3s
+    &:hover
+      background: $White
+      color: $Black
+  &:has(&__ico)
+    gap: 10px
+
+@media (max-width: $mobile)
+  .btn
+    max-width: none
+    padding: 13px 5px
+    font-size: 18px
+    line-height: 23.4px

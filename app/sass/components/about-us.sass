@@ -1,0 +1,38 @@
+.about-us
+  display: flex
+  justify-content: space-between
+  &__img
+    max-width: 730px
+  &__text
+    max-width: 610px
+    h2
+      margin-bottom: 50px
+    p
+      margin-bottom: 20px
+    p:last-child
+      margin-top: 30px
+      margin-bottom: 0
+      span
+        color: $Gold
+        font-size: 33px
+        font-weight: 500
+        line-height: 33px
+
+@media (max-width: $tablet)
+  .about-us
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+@media (max-width: $mobile)
+  .about-us
+    gap: 50px
+    h2
+      text-align: center
+    p:last-child
+      text-align: center
+      span
+        font-size: 21px
+        line-height: 21px
+    &__img
+      order: 1

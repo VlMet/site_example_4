@@ -1,0 +1,72 @@
+.table
+  &.closed
+    .table__content tr:nth-child(n+9) 
+      display: none
+    .table__bottom > .table__btn svg
+      transform: rotate(0deg)
+  &.opened-1
+    .table-num-1
+      display: table
+  &.opened-2
+    .table-num-2
+      display: table
+  &.opened-3
+    .table-num-3
+      display: table
+    .table__bottom
+      visibility: hidden
+  &__btn
+    padding: 13px 40px
+    border-radius: 7px
+    &.active
+      background: $Gold
+      color: $White
+      svg rect
+        fill: $White
+      svg path
+        fill: $Gold
+    &:hover
+      cursor: pointer
+  &__control
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
+    padding-bottom: 60px
+  &__body
+    border-bottom: 2px solid $Gold
+    padding-bottom: 20px
+    scrollbar-width: thin
+    scrollbar-color: $Gold $White
+    overflow: auto
+  &__content
+    width: 1410px
+    display: none
+    & > thead > tr:first-child
+      border-bottom: 2px solid $Gold
+      td,th
+        padding: 20px 20px
+    td,th
+      text-align: center
+      padding: 10px 20px
+      vertical-align: middle
+      &:nth-child(2)
+        max-width: 212px
+    tbody tr
+      transition: background-color 0.3s linear
+      &:hover
+        background-color: rgba(237, 237, 237, 0.2)
+  &__bottom
+    padding-top: 60px
+    display: flex
+    justify-content: center
+    button
+      width: 100%
+      max-width: 334px
+      svg
+        transform: rotate(180deg)
+
+@media (max-width: $tablet)
+  .table
+    &__control
+      grid-template-columns: 1fr
+      gap: 16px

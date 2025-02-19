@@ -1,0 +1,55 @@
+.comparison
+  // display: flex
+  display: grid
+  grid-template-columns: 1fr 1fr
+  justify-items: center
+  gap: 60px
+  justify-content: space-between
+  &__side
+    max-width: 456px
+  &__title
+    display: flex
+    gap: 20px
+    align-items: center
+    justify-content: center
+    margin-bottom: 40px
+    img
+      width: 106px
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 32px
+    color: $Black
+    li
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 30px 39px
+      min-height: 126px
+      text-align: center
+      box-shadow: 0px 0px 5.2px 0px #69696940
+      background-color: $White
+      border-radius: 15px
+      font-size: 18px
+      line-height: 21.6px
+
+@media (max-width: $mobile)
+  .comparison
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 60px
+    &__title
+      // display: flex
+      margin-bottom: 20px
+      img
+        width: 60px
+        height: 60px
+        order: -1
+    &__list
+      gap: 15px
+      li
+        min-height: auto
+        padding: 20px 15px
+        font-size: 16px
+        line-height: 19.2px

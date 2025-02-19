@@ -1,0 +1,42 @@
+.single
+  display: flex
+  justify-content: space-between
+  gap: 20px
+  &__content
+    width: 100%
+    max-width: 854px
+    //flex-shrink: 0
+    a
+      font-weight: 600
+      transition: color 0.3s linear
+      &:hover, &:visited
+        cursor: pointer
+        color: $Gold
+    & p:not(:first-child)
+      padding-top: 20px 
+    & img
+      border-radius: 5px
+      &:first-child
+        margin-bottom: 20px
+      &:not(:first-child)
+        margin-top: 20px
+  &__sidebar
+    max-width: 456px
+    padding: 65px 32px
+    height: fit-content
+    text-align: center
+    background: $GradientBg
+    border-radius: 10px
+    box-shadow: 0px 0px 5.2px 0px rgba(105, 105, 105, 0.25)
+    p
+      padding-top: 20px
+      font-size: 18px
+      line-height: 21.6px
+    .widget
+      padding: 50px 29px 0
+
+@media (max-width: $tablet)
+  .single
+    justify-content: center
+    &__sidebar
+      display: none

@@ -1,0 +1,302 @@
+.details
+  &__item
+    &:not(&:last-child)
+      margin-bottom: 30px
+    &:nth-child(1) .details__quest::before
+      background-image: url('../img/svg/number-1.svg')
+    &:nth-child(2) .details__quest::before
+      background-image: url('../img/svg/number-2.svg')
+    &:nth-child(3) .details__quest::before
+      background-image: url('../img/svg/number-3.svg')
+    &:nth-child(4) .details__quest::before
+      background-image: url('../img/svg/number-4.svg')
+    &:nth-child(5) .details__quest::before
+      background-image: url('../img/svg/number-5.svg')
+    &:nth-child(6) .details__quest::before
+      background-image: url('../img/svg/number-6.svg')
+    &:nth-child(7) .details__quest::before
+      background-image: url('../img/svg/number-7.svg')
+    &:nth-child(8) .details__quest::before
+      background-image: url('../img/svg/number-8.svg')
+    width: 100%
+    max-width: 1188px
+    margin-left: auto
+    margin-right: auto
+    background-color: $White
+    border-radius: 15px
+    padding: 20px 90px
+    color: $Black
+    &.active
+      .details
+        &__quest
+          font-weight: 600
+          &::after
+            transform: scale(-1)
+  &__quest
+    display: flex
+    align-items: center
+    gap: 26px
+    &:hover
+      cursor: pointer
+    &::before
+      content: ""
+      display: block
+      width: 42px
+      height: 60px
+      background-repeat: no-repeat
+      background-position: center
+      flex-shrink: 0
+      background-size: contain
+    &::after
+      content: ""
+      display: block
+      width: 34px
+      height: 17px
+      background-repeat: no-repeat
+      background-position: center
+      flex-shrink: 0
+      background-size: contain
+      background-image: url('../img/svg/details-row.svg')
+      margin-left: auto
+      transition: transform 0.3s linear
+  &__answer
+    will-change: height, display, padding-top
+    padding-top: 10px
+    padding-left: 68px
+    font-size: 18px
+    line-height: 21.6px
+    max-width: 795px
+
+.hrz-details
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 32px
+  align-items: start
+  &_val_4
+    grid-template-columns: repeat(4, 1fr)
+  &_h
+    &_470
+      min-height: 470px
+    &_516
+      min-height: 516px
+    &_602
+      min-height: 602px
+    &_635
+      min-height: 635px
+  &__content
+    position: relative
+    z-index: 1
+    padding: 50px 25px
+    background-color: $White
+    border-radius: 15px
+    text-align: center
+  &__top h3
+    color: rgb(41, 42, 43)
+    transition: color 0.2s linear
+  &__static-item
+    .hrz-details__content
+      padding: 40px 15px
+    .hrz-details__top::after
+      content: ""
+      display: block
+      margin-top: 30px
+      width: 100%
+      height: 66px
+      background-image: url('../img/svg/hrz-details-row.svg')
+      background-position: center
+      background-repeat: no-repeat
+    h3
+      color: rgba(0, 0, 0, 0)
+      background: $GradientLine
+      background-clip: text
+  &__item
+    color: $Black
+    position: relative
+    &:hover
+      cursor: pointer
+      .hrz-details__bottom
+        max-height: 600px
+      .hrz-details__top h3
+        color: rgba(0, 0, 0, 0)
+        background: $GradientLine
+        background-clip: text
+      &::after
+        top: 90%
+    &::after
+      content: ""
+      display: block
+      width: 138px
+      height: 23px
+      background-image: url('../img/svg/details-btn.svg') 
+      background-position: center bottom
+      background-repeat: no-repeat
+      position: absolute
+      top: 99%
+      left: 50%
+      transform: translateX(-50%)
+      transition: top 0.2s linear
+      z-index: 0
+  &__bottom
+    overflow: hidden
+    max-height: 0px
+    transition: max-height 0.3s linear
+    font-size: 18px
+    line-height: 21.6px
+    will-change: max-height
+    &::before
+      content: ""
+      display: block
+      width: 100%
+      height: 2px
+      border-radius: 2px
+      background: $GradientLine
+      margin: 20px 0
+
+.open-details
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 32px
+  align-items: start
+  &__item
+    box-shadow: 0px 0px 5.2px 0px #69696940
+    border-radius: 15px
+    overflow: hidden
+    &.active
+      .open-details
+        &__content
+          color: $White !important
+          &::before
+            opacity: 1
+        &__bottom
+          &:hover
+            span
+              border-bottom: 1px solid $White 
+          span 
+            &::before
+              content: "Скрыть"
+            &::after
+              background: url('data:image/svg+xml,<svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 8.5L5.5 13.5M5.5 13.5L10.5 8.5M5.5 13.5V0.5" stroke="%23EDEDED" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+              transform: scale(-1)
+          &::before
+            height: 0
+            opacity: 0
+        &__text
+          max-height: 500px
+  &__content
+    position: relative
+    z-index: 1
+    padding: 40px 25px
+    background-color: $White
+    border-radius: 15px
+    text-align: center
+    z-index: 0
+    &::before
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: $Gradient
+      z-index: -1
+      opacity: 0
+      transition: opacity 0.3s linear
+  &__bottom
+    font-size: 18px
+    line-height: 21.6px
+    padding-top: 30px
+    position: relative
+    &:hover
+        cursor: pointer
+        span 
+          border-bottom: 1px solid $Black
+    &::before
+      content: ""
+      display: block
+      width: 100%
+      height: 44px
+      position: absolute
+      bottom: 100%
+      transition: height 0.3s linear, opacity 0.3s linear
+      background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,0) 100%)
+    span
+      width: fit-content
+      margin: 0 auto
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 10px
+      border: 1px solid rgba(0, 0, 0, 0)
+      transition: border 0.3s linear
+      &::before
+        content: "Подробнее"
+      &::after
+        content: ""
+        display: block
+        width: 11px
+        height: 14px
+        transition: transform 0.3s linear
+        background-position: center
+        background: url('data:image/svg+xml,<svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 8.5L5.5 13.5M5.5 13.5L10.5 8.5M5.5 13.5V0.5" stroke="%23292A2B" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+  &__text
+    text-align: left
+    font-size: 18px
+    line-height: 21.6px
+    max-height: 44px
+    overflow: hidden
+    transition: 0.3s max-height linear
+  &__top
+    &::after
+      content: ""
+      display: block
+      width: 100%
+      height: 2px
+      border-radius: 2px
+      background: $GradientLine
+      margin: 20px 0 
+    h3
+      transition: color 0.2s linear
+
+@media (max-width: $tablet)
+  .open-details
+    grid-template-columns: 1fr
+    gap: 30px
+    &__text
+      max-height: 58px
+    &__content
+      padding: 40px 15px
+  .hrz-details
+    grid-template-columns: 1fr
+    gap: 40px
+    &__bottom
+      text-align: left
+      font-size: 16px
+      line-height: 19.2px
+
+@media (max-width: $mobile)
+  .hrz-details
+    &__static-item
+      .hrz-details__top
+        &::after
+          height: 37px
+          background-image: url('../img/svg/hrz-details-row-m.svg')
+  .details
+    &__item
+      &:not(&:last-child)
+        margin-bottom: 20px
+      padding: 20px 15px
+      p
+        font-size: 16px
+        line-height: 19.2px
+    &__answer
+      padding-left: 0
+      padding-top: 30px
+    &__quest
+      gap: 15px
+      &::before
+        width: 28px
+        height: 40px
+      &::after
+        width: 19px
+        height: 8px

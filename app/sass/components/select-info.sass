@@ -1,0 +1,103 @@
+.select-info
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 32px
+  &__title
+    margin-bottom: 50px
+  &__control
+    display: flex
+    gap: 20px
+    flex-wrap: wrap
+    .btn
+      width: auto
+      max-width: none
+      padding: 16px 54px
+      background: $White !important
+      color: $Black
+      br
+        display: none
+      &:nth-child(2),&:nth-child(4)
+        flex-grow: 1
+      &:hover, &.active
+        color: $White
+        &::before
+          opacity: 1 !important
+      &::before
+        opacity: 0 
+  &__output
+    &_big
+      .text-blocks__item
+        height: 506px !important
+    .text-blocks
+      position: relative
+      &__item
+        display: none
+        text-align: left
+        width: 100%
+        // height: 110%
+        height: 390px
+        justify-content: center
+        flex-direction: column
+        h3 
+          svg 
+            margin-right: 30px
+          &::after
+            max-width: 432px
+        &:hover
+          color: $Black
+  &.opened
+    &-1
+      .text-blocks__item:nth-child(1)
+        display: flex
+    &-2
+      .text-blocks__item:nth-child(2)
+        display: flex
+    &-3
+      .text-blocks__item:nth-child(3)
+        display: flex
+    &-4
+      .text-blocks__item:nth-child(4)
+        display: flex
+    &-5
+      .text-blocks__item:nth-child(5)
+        display: flex
+
+@media (max-width: $tablet) and (min-width: $mobile)
+  .select-info
+    align-items: end
+    &__control
+      .btn
+        width: 100%
+    &__output
+      height: auto
+      .text-blocks__item
+        height: auto
+
+@media (max-width: $mobile)
+  .select-info
+    grid-template-columns: 1fr
+    &__control
+      gap: 10px
+      .btn
+        width: auto
+        max-width: none
+        padding: 6px 12px
+        border-radius: 5px
+        br
+          display: block
+      .btn:nth-child(2),.btn:nth-child(4)
+          flex-grow: 0
+      &_extend
+        .btn:nth-child(2),.btn:nth-child(4)
+          flex-grow: 1
+    &__output
+      &_big
+        .text-blocks__item
+          height: 583px !important
+      .text-blocks
+        &__item
+          height: 431px
+          h3 svg 
+            width: 30px
+            height: 30px
+            margin-right: 15px

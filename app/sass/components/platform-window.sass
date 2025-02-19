@@ -1,0 +1,22 @@
+.platform-window
+  color: $Black
+  background: $White
+  border-radius: 15px
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 50px 0 50px 50px
+  &__text
+    max-width:600px
+    padding: 120px 0
+  
+@media (max-width: $mobile)
+  .platform-window
+    border-radius: 10px
+    padding: 60px 15px
+    flex-direction: column
+    &__text
+      padding: 0 0 30px
+      .btn
+        font-size: 16px
+        line-height: 19.2px

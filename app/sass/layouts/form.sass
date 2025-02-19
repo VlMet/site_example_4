@@ -1,0 +1,90 @@
+.form
+  width: 100%
+  height: 100%
+  &__inner
+    display: flex
+    flex-direction: column
+    gap: 30px
+  &__status
+    font-size: 16px
+    line-height: 19.2px
+    padding-top: 10px
+  &__succes
+    color: #52BF30
+    display: none
+  &__error
+    color: #E55151
+    display: none
+    &::before
+      content: ""
+      display: block
+      width: 20px
+      height: 20px
+      background-color: #E55151
+      border-radius: 50%
+      background-position: center
+      background-repeat: no-repeat
+      background-image: url('data:image/svg+xml,<svg width="4" height="13" viewBox="0 0 4 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.06 9.78L0.94 3.34V0.119999H3.12V3.34L3 9.78H1.06ZM0.86 13V11.36H3.18V13H0.86Z" fill="%23FDFDFD"/></svg>')
+  // &__submit
+  //   .btn
+  //     // width: 100%
+  //     // max-width: none
+  &__input, &__textarea
+    input, textarea
+      padding: 14px 20px
+      width: 100%
+      border: none
+      background: $White
+      border-radius: 5px
+      font-size: 18px
+      line-height: 21.6px
+      display: block
+      margin-top: 10px
+    textarea
+      height: 169px
+      resize: none
+  &__agree
+    margin-top: 20px
+    margin-bottom: 40px
+    font-size: 12px
+    line-height: 14.4px
+    input
+      visibility: hidden
+      position: absolute
+      z-index: -1
+      width: 10px
+      &:checked + span > span::before
+        background-color: $Gold
+    label
+      // display: flex
+      // align-items: center
+      //gap: 10px
+      span > span
+        display: flex
+        align-items: center
+        gap: 10px
+        &::before
+          content: ""
+          display: block
+          flex-shrink: 0
+          width: 28px
+          height: 28px
+          background-color: $White
+          background-image: url("../img/svg/input-agree.svg")
+          background-position: center
+          background-repeat: no-repeat
+        &:hover
+          cursor: pointer
+
+
+@media (max-width: $mobile)
+  .form
+    max-width: none
+    &__agree
+      font-size: 10px
+      line-height: 12px
+      input
+        & > span::before
+          border-radius: 4px
+      label span > span
+          align-items: start

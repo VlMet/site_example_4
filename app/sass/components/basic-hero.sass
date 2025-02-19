@@ -1,0 +1,76 @@
+.basic-hero
+  &__container
+    height: 100%
+    display: flex
+    justify-content: space-between
+    &_center
+      justify-content: center
+      *
+        text-align: center
+        align-items: center
+  &__image
+    display: flex
+    align-items: center
+    max-width: 700px
+    &_min
+      max-width: 400px
+    // &_midl
+    //   max-width: 500px
+    &_big
+      max-width: 700px
+    &_end
+      align-self: flex-end
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    max-width: 620px
+    &_long
+      max-width: 932px
+    p 
+      margin-top: 20px
+    .btn
+      margin-top: 40px
+  &__main
+    padding-right: 20px
+    padding-top: 140px
+    height: 720px
+    &_long
+      height: 820px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $Black
+    background-image: url("../img/svg/basic-hero-bg.svg")
+    background-repeat: no-repeat
+    &_min-top
+      padding-top: 110px
+
+@media (max-width: $mobile)
+  .basic-hero
+    &__container
+      flex-direction: column
+      position: relative
+    &__text
+      padding-bottom: 30px 
+      text-align: center
+      .btn
+        position: absolute !important
+        bottom: -40px
+    &__main
+      background-image: url("../img/svg/m-basic-hero-bg.svg")
+      background-size: cover
+      padding-bottom: 100px
+      padding-top: 180px
+      padding-right: 0
+      height: auto
+    &_extended 
+      .basic-hero__main
+        padding-bottom: 428px
+        .btn
+          position: relative !important
+          bottom: auto
+      &+ *
+        margin-top: -428px
+        position: relative
+        z-index: 1

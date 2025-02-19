@@ -1,0 +1,43 @@
+.advantages
+  display: flex
+  justify-content: space-between
+  gap: 40px
+  flex-wrap: wrap
+  &__item
+    h3
+      font-size: 90px
+      font-weight: 600
+      line-height: 90px
+      color: $Gold
+      &::after
+        content: ""
+        display: block
+        width: 100%
+        height: 2px
+        border-radius: 2px
+        background: $GradientLine
+        margin: 10px 0
+    p
+      font-size: 18px
+      line-height: 21.6px
+
+@media (max-width: $tablet)
+  .advantages
+    justify-content: space-around
+    gap: 35px
+
+@media (max-width: $mobile)
+  .advantages
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 30px
+    &__item
+      *
+        text-align: center
+      p
+        font-size: 16px
+        line-height: 19.2px
+      h3::after
+        margin: 5px 0
+

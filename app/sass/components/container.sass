@@ -1,0 +1,99 @@
+.container
+  &:not(.container_inside), &__pd
+    padding: 120px 0
+  background: $White
+  color: $Black
+  overflow: hidden
+  // &_inside
+  //   padding: 0
+  &__more
+    padding-top: 110px
+  &_floor
+    padding-bottom: 0 !important
+  &_edge
+    padding-top: 0 !important
+    margin-top: -120px
+  &_floor, &_floor + &
+    overflow: visible
+  &_footer
+    padding-bottom: 54px !important
+  &_banner
+    padding: 186px 0 140px
+  &__wrap
+    &_center
+      display: flex
+      flex-direction: column
+      align-items: center
+    //фактически 1218px
+    //max-width: 1250px
+    //фактически 1432px
+    max-width: 1452px
+    margin: 0 auto
+    padding: 0 10px
+    width: 100%
+    height: 100%
+    //не точно
+    // display: flex
+    // flex-direction: column
+    // align-items: center
+    //end
+    & > h2.left
+      text-align: left
+    & > h2, & > &__title
+      margin-bottom: 50px
+      text-align: center
+      &:has( + p)
+        margin-bottom: 30px
+      & + p
+        // margin-bottom: 50px
+        text-align: center
+        max-width: 1022px
+        margin: 0 auto 50px
+  &_bl
+    background: $Black
+    color: $White
+    a
+      color: $White
+  &__bottom
+    margin-top: 40px
+  &__abroad
+    //background: gray
+    //overflow: hidden
+  &__blur, &__blured
+    position: relative
+    z-index: 0
+  //   > *
+  //     position: relative
+  //     z-index: 1
+  &__blur::before, &__blured::after
+    content: ""
+    max-width: 800px
+    max-height: 800px
+    transform: scale(120%, 120%) translateX(-40%)
+    top: 0
+    left: 50%
+    // left: -15%
+    @include blured-area
+  &__blur_big::before
+    max-width: 1723px
+    max-height: 798px
+
+@media (max-width: $tablet)
+  .container
+    &:not(.container_inside), &__pd
+      padding: 100px 0
+    & > h2, & > &__title
+      margin-bottom: 40px
+      &:has( + p)
+        margin-bottom: 20px
+      & + p
+        margin-bottom: 40px
+    &__bottom
+      margin-top: 30px
+    
+
+@media (max-width: $super-mobile)
+  .container
+    &__wrap:has(> .widget)
+      padding: 0
+    

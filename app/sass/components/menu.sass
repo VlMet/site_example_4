@@ -1,0 +1,109 @@
+.mobile-menu
+  //display: none
+  position: absolute
+  z-index: 3
+  top: 99%
+  right: -100%
+  transition: right 0.5s
+  height: 100vh
+  max-width: 350px
+  width: 100%
+  background: $Black
+  &__middle
+    padding: 25px 10px
+    & > .btn
+      width: 100%
+      padding: 11px 5px
+  &__bottom
+    position: absolute
+    bottom: 140px
+    width: 100%
+    display: flex
+    justify-content: center
+    gap: 40px
+    .active
+      color: $Gold
+  nav > ul
+    display: flex
+    flex-direction: column
+    & > li
+      width: 100%
+      display: block
+      &::after
+        content: ""
+        display: block
+        width: 100%
+        height: 1px
+        border-bottom: 1px solid rgba(237, 237, 237, 0.26)
+        transform: scaleX(0.95)
+      &.active
+        & > a
+          background-color: $Gold
+          color: $White
+          &::after
+            transform: scale(-1)
+          &:hover
+            color: $White
+        & > ul
+          max-height: 500px
+      & > ul 
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.3s
+        & > li > a
+          display: block
+          padding: 10px 20px
+          width: 100%
+          transition: color 0.2s, background-color 0.2s
+          &:hover
+            color: $Gold
+            cursor: pointer
+          &.active
+            color: $Gold
+      & > a
+        display: flex
+        padding: 13px 10px
+        background-color: $Black
+        width: 100%
+        transition: color 0.2s, background-color 0.2s linear
+        justify-content: space-between
+        align-items: center
+        &::after
+          content: ""
+          display: block
+          width: 11px
+          height: 6px
+          background-position: center
+          transition: transform 0.2s linear
+          background-image: url('../img/svg/mobile-menu-row.svg')
+        &:hover
+          color: $Gold
+          cursor: pointer
+        &.active
+          color: $Gold
+
+
+.closed-window
+  position: fixed
+  opacity: 0
+  top: 0
+  left: 100%
+  width: 100%
+  height: 100%
+  background: black
+  z-index: 2
+  transition: opacity 0.3s
+
+html.menu-opened
+  overflow: hidden
+  body
+    overflow: hidden
+    .closed-window
+      opacity: 0.1
+      left: 0
+    .mobile-menu
+      right: 0
+
+@media screen and ( max-width: $mobile )
+  .mobile-menu
+    max-width: none

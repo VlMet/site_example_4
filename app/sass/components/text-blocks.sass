@@ -1,0 +1,85 @@
+.text-blocks
+  // display: flex
+  // flex-wrap: wrap
+  // align-items: stretch
+  // justify-content: center
+  // gap: 32px
+  &_val_3
+    .text-blocks__item
+      width: 456px
+  &_val_5
+    .text-blocks__item:nth-child(3)
+      margin-right: 1px
+  &__item
+    position: relative
+    width: 334px
+    height: auto
+    padding: 50px 25px
+    z-index: 0
+    border-radius: 15px
+    overflow: hidden
+    text-align: center
+    background-color: #EDEDED
+    box-shadow: 0px 0px 5.2px 0px rgba(105, 105, 105, 0.25)
+    color: $Black
+    transition: color 0.3s linear
+    &_card
+      //padding-bottom: 40px
+      display: flex
+      align-items: center
+      flex-direction: column
+      img
+        display: block
+        // align-self: flex-end
+        margin-top: auto
+        padding-top: 15px
+        width: auto
+    p, ul, ol
+      font-size: 18px
+      line-height: 21.6px
+    ul li
+      list-style: inside disc
+    ol li
+      list-style: inside
+    h3
+      width: 100%
+      flex-wrap: nowrap
+    h3 + p::before
+      content: ""
+      display: block
+      width: 100%
+      height: 2px
+      border-radius: 2px
+      background: $GradientLine
+      margin: 20px 0
+    &:not(&_card):hover
+      color: $White
+      .text-blocks__bg
+        opacity: 1
+  &__bg
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    background: $Gradient
+    width: 100%
+    height: 100%
+    opacity: 0
+    transition: opacity 0.3s linear
+
+@media (min-width: $mobile)
+  .text-blocks > .swiper-wrapper
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    justify-content: center
+    gap: 32px
+@media (max-width: $mobile)
+    .text-blocks
+      &__item
+        padding: 40px 15px
+        p, ul, ol
+          font-size: 16px
+          line-height: 19.2px
+        h3 + p::before
+          margin: 13px 0

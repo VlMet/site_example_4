@@ -1,0 +1,62 @@
+.faq
+  position: relative
+  width: 100%
+  max-width: 810px
+  &__block
+    border-top: 2px solid $Gold
+    padding: 5px 5px
+    overflow: hidden
+    &:last-child
+      border-bottom: 2px solid $Gold
+  &__trigger
+    text-align: left
+    padding: 25px 15px
+    background: none
+    //padding: 0
+    color: $White
+    justify-content: space-between
+    width: 100%
+    transition: color 0.3s linear
+    gap: 5px
+    & svg
+      flex-shrink: 0
+      transition: transform 0.3s linear
+      path
+        transition: stroke 0.3s linear
+    &:hover
+      cursor: pointer
+      color: $Brown
+      & svg path
+        stroke: $Gold
+  &__block.active > &__trigger
+    color: $Brown
+    // padding-bottom: 10px
+    svg
+      transform: scale(-1)
+      path
+        stroke: $Gold
+  &__content
+    // height: 0
+    padding: 0 20px 30px
+    opacity: 0.7
+    max-width: 655px
+    font-size: 18px
+    line-height: 21.6px
+    will-change: height, display, margin-bottom
+    // max-height: 0
+    overflow: hidden
+
+@media (max-width: $mobile)
+  .faq
+    &__block
+      padding: 0
+    &__trigger
+      padding: 10px 0
+      & svg
+        width: 20px
+    &__content
+      font-size: 16px
+      line-height: 19.2px
+      padding: 0 0 15px
+    // &__trigger.active ~ &__content
+    //   padding: 0 0 15px

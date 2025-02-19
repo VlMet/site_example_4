@@ -1,0 +1,65 @@
+img
+  width: 100%
+  height: auto
+.img
+  &_bottom
+    position: relative
+    display: flex
+    align-items: flex-end
+  &_n
+    &_main-platform
+      max-width: 720px
+  &__card
+    display: flex
+    position: absolute
+    z-index: 2
+    padding: 13.5px 22px
+    background: rgba(243, 243, 243, 0.6)
+    backdrop-filter: blur(2px)
+    color: $Black
+    border-radius: 9px
+    max-width: 325px
+    font-size: 18px
+    line-height: 21.6px
+    & > *:first-child
+      font-size: 50px
+      font-weight: 500
+      line-height: 55px
+    &_left
+      left: 0
+      bottom: 26%
+    &_right
+      top: 22%
+      right: 0
+  img
+    // display: block
+    object-fit: contain
+
+@media (max-width: $tablet)
+  .img
+    &__card
+      font-size: 15px
+      line-height: 18px
+      padding: 11px 20px
+      max-width: 277px
+      & > *:first-child
+        font-size: 42px
+        line-height: 47px
+      &_right
+        top: 24%
+
+@media (max-width: $mobile)
+  .img
+    &__card
+      font-size: 12px
+      line-height: 14.4px
+      padding: 15px 14px
+      max-width: 204px
+      & > *:first-child
+        font-size: 25px
+        line-height: 27px
+      &_left
+        bottom: 68%
+      &_right
+        top: 59%
+    

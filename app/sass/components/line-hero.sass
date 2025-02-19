@@ -1,0 +1,59 @@
+.line-hero
+  &__container
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__image
+    flex-shrink: 0
+    &_min
+      max-width: 400px
+    &_midl
+      max-width: 500px
+    &_big
+      max-width: 700px
+    &_end
+      align-self: flex-end
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    max-width: 578px
+    min-width: 480px
+    p 
+      margin-top: 20px
+    .btn
+      margin-top: 40px
+    &_long
+      max-width: 732px
+  &__bottom
+    padding: 110px 0
+  &__main
+    padding-right: 20px
+    padding-top: 140px
+    height: 630px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(277.36deg, #D5A429 -17.46%, #D2A22A 6.03%, #8F664E 103.04%)
+
+@media (max-width: $mobile)
+  .line-hero
+    &__container
+      flex-direction: column
+    &__main
+      height: auto
+      padding-right: 0
+    &__text
+      text-align: center
+      min-width: auto
+      .btn
+        margin-top: 30px
+    &__image
+      padding-top: 30px
+      padding-bottom: 100px
+      &_end
+        padding-bottom: 0
+        padding-top: 40px
+    &__bottom
+      padding: 100px 0

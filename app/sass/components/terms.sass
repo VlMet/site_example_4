@@ -1,0 +1,144 @@
+.types
+  display: flex
+  flex-direction: column
+  gap: 40px
+  &__item
+    box-shadow: 0px 0px 5.2px 0px rgba(105, 105, 105, 0.25)
+    border-radius: 15px
+    overflow: hidden
+    padding: 40px 50px
+    position: relative
+    z-index: 0
+    &_active
+      .types__bg
+        opacity: 1
+      & *
+        color: $White
+      .types__list > li::before
+        background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 0C10.0277 0 7.61099 0.733112 5.55538 2.10663C3.49976 3.48015 1.89761 5.43238 0.951511 7.71646C0.00541605 10.0005 -0.242126 12.5139 0.24019 14.9386C0.722505 17.3634 1.91301 19.5907 3.66117 21.3388C5.40933 23.087 7.63661 24.2775 10.0614 24.7598C12.4861 25.2421 14.9995 24.9946 17.2835 24.0485C19.5676 23.1024 21.5199 21.5002 22.8934 19.4446C24.2669 17.389 25 14.9723 25 12.5C25 10.8585 24.6767 9.23303 24.0485 7.71646C23.4203 6.19989 22.4996 4.8219 21.3388 3.66116C20.1781 2.50043 18.8001 1.57969 17.2835 0.951506C15.767 0.323322 14.1415 0 12.5 0ZM19.595 10.2962L12.095 17.1712C11.8575 17.389 11.5452 17.5066 11.2231 17.4996C10.901 17.4927 10.594 17.3616 10.3663 17.1337L6.61625 13.3837C6.49687 13.2684 6.40164 13.1305 6.33613 12.978C6.27062 12.8255 6.23613 12.6615 6.23469 12.4955C6.23325 12.3295 6.26488 12.1649 6.32773 12.0113C6.39058 11.8577 6.48339 11.7181 6.60076 11.6008C6.71813 11.4834 6.85769 11.3906 7.01131 11.3277C7.16493 11.2649 7.32953 11.2332 7.49551 11.2347C7.66148 11.2361 7.8255 11.2706 7.97801 11.3361C8.13051 11.4016 8.26845 11.4969 8.38375 11.6162L11.2875 14.52L17.905 8.45375C18.1493 8.22964 18.4727 8.11177 18.8039 8.12607C19.1352 8.14037 19.4471 8.28567 19.6713 8.53C19.8954 8.77433 20.0132 9.09768 19.9989 9.42892C19.9846 9.76015 19.8393 10.0721 19.595 10.2962Z' fill='%23EDEDED'/%3E%3C/svg%3E%0A")
+    font-size: 18px
+    line-height: 21.6px
+    padding-right: 62px
+  &__bottom
+    .btn
+      margin-top: 40px
+    overflow: hidden
+    will-change: max-height
+    transition: max-height 0.3s linear
+  &__top
+    padding: 0 40px
+    position: relative
+    &::after
+      content: ""
+      display: block
+      width: 100%
+      transform: scale(1.05)
+      height: 2px
+      border-radius: 2px
+      background: $Gold
+      margin: 20px 0
+  &__bg
+    background: $Gradient
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    opacity: 0
+    transition: opacity 0.3s linear
+  &__content
+    padding: 0 40px
+    // display: grid
+    // grid-template-columns: repeat(3, 1fr)
+    // grid-template-columns:  40% 30% 30%
+    display: flex
+    justify-content: space-between
+  &__list
+    width: 313px
+    &:first-child
+      width: 336px
+    font-size: 18px
+    line-height: 21.6px
+    display: flex
+    flex-direction: column
+    gap: 20px
+    & > li
+      display: flex
+      gap: 15px
+      &::before
+        content: ""
+        width: 25px
+        height: 25px
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none"><path fill="%23D5A429" d="M12.5 0a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25m7.095 10.296-7.5 6.875a1.25 1.25 0 0 1-1.729-.037l-3.75-3.75a1.25 1.25 0 1 1 1.768-1.768l2.903 2.904 6.618-6.066a1.25 1.25 0 1 1 1.69 1.842"/></svg>')
+        flex-shrink: 0
+      &.not-active
+        opacity: 0.3
+    &_not-active
+      & > li
+        opacity: 0.3
+  &__terms
+    width: 366px
+    display: flex
+    flex-direction: column
+    gap: 20px
+    align-content: center
+    & > li > span:first-child
+      font-size: 18px
+      line-height: 21.6px
+      width: 230px
+  &__mobile
+    padding: 40px 0 20px
+    span
+      display: flex
+      gap: 10px
+      align-items: center
+      &::after
+        content: ""
+        width: 10px
+        height: 13px
+        //background-image: 
+
+@media (min-width: $mobile)
+  .types
+    &__mobile
+      display: none
+    &__hidden
+      display: none
+    &__bottom
+      max-height: 0
+    &__item
+      &:hover
+        .types__bottom
+          max-height: 200px
+
+@media (max-width: $tablet)
+  .types
+    &__content
+      flex-wrap: wrap
+      padding: 0
+    &__terms
+      flex-basis: 100%
+      padding-bottom: 40px
+    &__top
+      padding: 0
+
+@media (max-width: $mobile)
+  .types
+    &__price
+      display: none
+    &__content
+      flex-direction: column 
+      font-size: 16px
+      line-height: 19.2px
+    &__bottom
+      flex-direction: column
+      padding-top: 50px
+    &__list
+      gap: 15px
+      &:last-child
+        padding-top: 15px
+    &__terms
+      gap: 15px
+      & > li > span:first-child
+        width: 160px

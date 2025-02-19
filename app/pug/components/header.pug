@@ -1,0 +1,84 @@
+.closed-window
+header.header.container_inside.container_bl
+  .container__wrap
+    .header__content.flex.flex_center_a.flex_sp
+      a(href="index.html").header__logo 
+        img(src="img/svg/logo.svg", alt="")
+
+      .header__panel.flex.flex_center_a.flex_end
+        nav 
+          ul
+            li 
+              a(href="#") Menu item
+              ul
+                li 
+                  a(href="terms.html") Menu item
+                li 
+                  a(href="platform.html") Menu item
+                li 
+                  a(href="strategy.html") Menu item
+            li 
+              a(href="#") Menu item
+              ul
+                li 
+                  a(href="currencies.html") Menu item
+                li 
+                  a(href="shares.html") Menu item
+                li 
+                  a(href="indices.html") Menu item
+                li 
+                  a(href="crypto.html") Menu item
+            li 
+              a(href="#") Menu item
+              ul
+                li 
+                  a(href="state.html") Menu item
+                li 
+                  a(href="news.html") Menu item
+                li 
+                  a(href="prognoses.html") Menu item
+                li 
+                  a(href="calendar.html") Menu item
+            //- li 
+            //-   a(href="#") Menu item
+            //-   ul
+            //-     li 
+            //-       a(href="basics.html") Menu item
+            //-     li 
+            //-       a(href="analysis.html") Menu item
+            //-     li 
+            //-       a(href="algorithm.html") Menu item
+            //- li 
+            //-   a(href="#") Menu item
+            //-   ul
+            //-     li 
+            //-       a(href="history.html") Menu item
+            //-     li 
+            //-       a(href="whyus.html") Menu item
+            //-     li 
+            //-       a(href="documents.html") Menu item
+            //-     li 
+            //-       a(href="contacts.html") Menu item
+        .header__buttons.flex.flex_center_a.flex_gap_30
+          a(href="#signup", target="_blank").btn.btn_min.btn_wh.btn_min.header__open Button
+          a(href="#signin", target="_blank").btn.btn_br.btn_min.flex.flex_center_a.flex_gap_10
+            include ../../img/svg/ico-user.svg
+            span Button
+        .header__lang
+          ul
+            li
+              a(href="#") En
+              ul
+                li 
+                  a(href="#") En
+                li 
+                  a(href="#") Fr
+                li 
+                  a(href="#") Ge
+
+      button.header__burger.clickable-solo
+        include ../../img/svg/burger-line.svg
+        include ../../img/svg/burger-line.svg
+        include ../../img/svg/burger-line.svg
+      //- .header__m-menu
+      include ../components/mobile-menu.pug

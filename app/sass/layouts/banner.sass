@@ -1,0 +1,191 @@
+.banner
+  // height: 600px
+  position: relative
+  z-index: 0
+  &::before
+    content: ""
+    max-width: 768px
+    max-height: 562px
+    transform: translate(-40%, -40%)
+    top: 0
+    left: 0
+    @include blured-area
+  &::after
+    content: ""
+    visibility: hidden
+    max-height: 387px
+    transform: translate(0, 40%)
+    bottom: 0
+    left: 0
+    @include blured-area
+  &__content
+    height: 600px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &_duo
+      // &::before, &::after
+      //   max-height: 522px
+      //   max-width: 537px
+      //   top: 50%
+      // &::before
+      //   transform: translate(-50%,-50%)
+      // &::after
+      //   right: 0
+      //   left: auto
+      //   bottom: auto
+      //   visibility: visible 
+      //   transform: translate(50%,-50%)
+      .banner
+        &__text
+          text-align: center
+          align-items: center
+        &__content
+          justify-content: center
+  &__blur
+    position: relative
+    z-index: 0
+    &::before
+      content: ""
+      max-width: 760px
+      max-height: 680px
+      transform: scale(105%, 120%)
+      // top: 50%
+      // left: 0
+      @include blured-area
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 50px
+    max-width: 573px
+    // flex-basis: 573px
+    flex-shrink: 0
+    &_long
+      max-width: 642px
+  &__img
+    flex-shrink: 0
+    &_t
+      &_1
+        width: 926px
+        // transform: translateX(7%)
+      &_2
+        width: 709px
+        align-self: end
+      &_3
+        width: 405px
+      &_4
+        width: 866px
+@media (min-width: $mobile)
+  .banner_duo
+      &::before, &::after
+        max-height: 522px
+        max-width: 537px
+        top: 50%
+      &::before
+        transform: translate(-50%,-50%) !important
+      &::after
+        right: 0
+        left: auto
+        bottom: auto
+        visibility: visible 
+        transform: translate(50%,-50%)
+@media (max-width: $tablet)
+  .banner
+    &::before
+      transform: translate(-60%, -40%)
+    &__text
+      gap: 30px
+      max-width: 450px
+    &__content
+      height: 450px
+    &__img
+      &_t
+        &_1
+          width: 693px
+        &_2
+          width: 526px
+        &_3
+          width: 405px
+        &_4
+          width: 669px
+          transform: translate(-13%)
+
+@media (max-width: $mobile)
+  .banner
+    &__blur::before
+      visibility: hidden
+    &::before
+      transform: translate(-39%, -51%)
+    &::after
+      visibility: visible
+    &__content
+      height: 720px
+      flex-direction: column
+      padding-top: 100px
+    &__text
+      text-align: center
+    &_duo
+      .banner
+        &__content
+          justify-content: space-between
+        &__img:last-child
+          display: none
+        &__img:first-child
+          order: 1
+    &__img
+      &_t
+        &_1
+          width: 554px
+          padding-bottom: 40px
+          // padding-top: 40px
+        &_2
+          // padding-top: 9px
+          width: 354px
+          align-self: auto
+        &_3
+          padding-bottom: 100px
+          width: 405px
+        &_4
+          // padding-top: 68px
+          padding-bottom: 70px
+          width: 428px
+
+
+@media (max-width: $super-mobile)
+  .banner
+    &__img
+      &_t_1
+        // transform: translateX(-6%)
+      &_t_2
+        transform: translateX(7%)
+      &_t_3
+        transform: translateX(-8%)
+
+/* ==== old ==== */  
+.bnr
+  position: relative
+  &_1
+    .bnr__one
+      flex-basis: 40%
+      flex-shrink: 0
+    .bnr__two
+      flex-shrink: 0
+      max-width: 920px
+    &::before
+      content: ""
+      max-width: 768px
+      max-height: 562px
+      top: -36%
+      left: -22%
+      @include blured-area
+
+@media (max-width: $mobile)
+  .bnr
+    &__content
+      padding-bottom: 80px
+      flex-direction: column
+      font-size: 21px
+      line-height: 21px
+      text-align: center
+    &__two
+      transform: scale(1.4) translateX(2%)

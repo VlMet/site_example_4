@@ -1,0 +1,55 @@
+.promo-block
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    // max-height: 560px
+    &_around
+      justify-content: space-around
+  &__image
+    // flex-shrink: 0
+    // width: 100%
+    flex-basis: 45%
+    &:not(.promo-block__image_center)
+      align-self: flex-end
+    &_min
+      max-width: 400px
+    &_down
+      transform: translateY(20px)
+  &__text
+    // flex-basis: 50%
+    max-width: 731px
+    // min-width: 690px
+    padding: 110px 0
+    .btn
+      margin-top: 40px
+    h2
+      margin-bottom: 20px
+    & p:not(&:last-child)
+      margin-bottom: 10px
+
+@media (max-width: $tablet)
+  .promo-block
+    &__content
+      flex-direction: column
+      justify-content: center !important
+    &__text
+      padding-top: 100px
+      padding-bottom: 70px
+      h2
+        text-align: center
+      .btn
+        margin: 40px auto 0
+    &__image
+      align-self: center !important
+      flex-basis: auto
+      width: 80%
+      &_center
+        padding-bottom: 100px
+@media (max-width: $mobile)
+  .promo-block
+    &__text
+      padding-bottom: 50px
+    &__image
+      transform: translateY(1px)
+      width: 100%
